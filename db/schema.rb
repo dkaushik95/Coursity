@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20160801035700) do
 
-  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "courses", force: :cascade do |t|
     t.string   "c_name"
     t.integer  "price"
-    t.text     "description", limit: 65535
+    t.text     "description"
     t.string   "prof"
     t.integer  "units"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
